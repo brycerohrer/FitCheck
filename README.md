@@ -1,4 +1,5 @@
-# Bryce's MERN Template
+# FitCheck - Pics or it didn't happen
+[![wakatime](https://wakatime.com/badge/user/1b7c8de8-84c5-4281-b1e7-9489bfad0d0d/project/13fe392b-8a8f-4b45-ac5a-77b951c2fbbe.svg)](https://wakatime.com/badge/user/1b7c8de8-84c5-4281-b1e7-9489bfad0d0d/project/13fe392b-8a8f-4b45-ac5a-77b951c2fbbe)
 
 # Steps
 1. npm init, this allows you to set up node package manager, which is like managing your coding addons
