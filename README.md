@@ -12,3 +12,10 @@
 - mongoose
 - concurrently
 - nodemon
+
+# Notes
+express api with images
+
+images should be within the user document, and should be inside the images collection inside user
+
+currently there are no 

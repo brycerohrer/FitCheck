@@ -1,12 +1,31 @@
-const express = require ('express')
-const router = express.Router()
-const { uploadImage, getImage, updateImage, deleteImage} = require('../controllers/imageController.js')
+// @desc This is the routing file for images. The purpose of this file is to create endpoints in which
+// a person can make requests and then configure the actions that should happen after they do a certain
+// request (ex. GET, POST, PUT, DELETE).
+const express = require("express");
+const router = express.Router();
+const multer = require('multer')
+// setting up the configuration for multer within this function
+// destination controls where the images are being stored, filename controllers how it's named
+const storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, './uploads/',);
+    },
+    filename: function(req, file, cb)  {
+        cb(null, file.originalname);
+    }
+});
+const upload = multer({storage: storage})
 
-router.route('/').get(getImage).post(uploadImage)
+const {
+  uploadImage,
+  getImage,
+  updateImage,
+  deleteImage,
+} = require("../controllers/imageController.js");
 
-router.route('/:id').put(updateImage).delete(deleteImage)
+router.route("/").get(getImage).post(upload.single('image'),uploadImage);
 
-module.exports = router
+router.route("/:id").put(updateImage).delete(deleteImage);
 
-
-
+module.exports = router;
+ 
