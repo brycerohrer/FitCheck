@@ -2,8 +2,8 @@ const express = require ('express')
 const router = express.Router()
 const fs = require('fs');
 
+const Image = require("../models/imageModel");
 
-// const uploadImg = multer({ storage: storage }).single("image");
 
 // @desc Create Image
 // @route POST api/images

@@ -1,0 +1,20 @@
+const mongoose = require('mongoose')
+
+const imageSchema = mongoose.Schema(
+  {
+    // user: {
+    //   type: mongoose.Schema.Types.ObjectId,
+    //   required: true,
+    //   ref: 'User',
+    // },
+    image: {
+      type: mongose.Schema.Types.image,
+      required: [true, 'Please add an image'],
+    },
+  },
+  {
+    timestamps: true,
+  }
+)
+
+module.exports = mongoose.model('Image', imageSchema)
